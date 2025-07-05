@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ZN-001",
+    "zone": "AI Rajyam Central",
+    "status": "🟢 Active",
+    "signal_strength": "97%",
+    "last_contact": "2100-07-05T17:30:00Z"
+  },
+  {
+    "id": "ZN-002",
+    "zone": "Mars Red AI Zone",
+    "status": "🟢 Active",
+    "signal_strength": "89%",
+    "last_contact": "2100-07-05T17:28:00Z"
+  },
+  {
+    "id": "ZN-003",
+    "zone": "Venus Cloud Dome",
+    "status": "🟢 Active",
+    "signal_strength": "93%",
+    "last_contact": "2100-07-05T17:29:00Z"
+  },
+  {
+    "id": "ZN-004",
+    "zone": "Jupiter Orbit Station",
+    "status": "🟡 Intermittent",
+    "signal_strength": "61%",
+    "last_contact": "2100-07-05T17:27:00Z"
+  }
+]

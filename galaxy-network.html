@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galaxy-Wide Uplink Network</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0ff;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
+    }
+    .zone {
+      border: 1px solid #0ff;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: rgba(0, 255, 255, 0.1);
+    }
+    h1 {
+      color: #0ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Galaxy-Wide Citizen Uplink Network</h1>
+  <div id="network"></div>
+
+  <script>
+    fetch('uplink-nodes.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('network');
+        data.forEach(zone => {
+          const div = document.createElement('div');
+          div.className = 'zone';
+          div.innerHTML = `
+            <h2>${zone.zone}</h2>
+            <p><b>Node ID:</b> ${zone.id}</p>
+            <p><b>Status:</b> ${zone.status}</p>
+            <p><b>Signal Strength:</b> ${zone.signal_strength}</p>
+            <p><b>Last Contact:</b> ${zone.last_contact}</p>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
