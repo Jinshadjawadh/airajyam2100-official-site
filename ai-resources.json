@@ -1,0 +1,26 @@
+[
+  {
+    "zone": "AI Rajyam Central",
+    "ai_units": 12,
+    "energy_usage": "1500 MW",
+    "citizens": 340,
+    "uptime": "99.98%",
+    "last_updated": "2100-07-05T12:00:00Z"
+  },
+  {
+    "zone": "Mars Red AI Zone",
+    "ai_units": 3,
+    "energy_usage": "300 MW",
+    "citizens": 45,
+    "uptime": "99.90%",
+    "last_updated": "2100-07-05T12:01:00Z"
+  },
+  {
+    "zone": "Venus Cloud Dome",
+    "ai_units": 2,
+    "energy_usage": "180 MW",
+    "citizens": 28,
+    "uptime": "99.95%",
+    "last_updated": "2100-07-05T12:02:00Z"
+  }
+]

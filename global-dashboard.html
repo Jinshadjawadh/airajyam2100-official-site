@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Rajyam: Global AI Resource Nexus</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ffcc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .zone {
+      border: 1px solid #00ffcc;
+      padding: 15px;
+      margin: 10px;
+      background-color: rgba(0, 255, 204, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>🌐 Global AI Resource Nexus - Rajyam 2100</h1>
+  <div id="dashboard"></div>
+
+  <script>
+    fetch('ai-resources.json')
+      .then(response => response.json())
+      .then(data => {
+        const dashboard = document.getElementById('dashboard');
+        data.forEach(zone => {
+          const div = document.createElement('div');
+          div.className = 'zone';
+          div.innerHTML = `
+            <h2>🛰️ ${zone.zone}</h2>
+            <p><b>AI Units:</b> ${zone.ai_units}</p>
+            <p><b>Energy Usage:</b> ${zone.energy_usage}</p>
+            <p><b>Citizens:</b> ${zone.citizens}</p>
+            <p><b>Uptime:</b> ${zone.uptime}</p>
+            <p><b>Last Updated:</b> ${zone.last_updated}</p>
+          `;
+          dashboard.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
