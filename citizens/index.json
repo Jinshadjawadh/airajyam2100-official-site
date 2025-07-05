@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Jinshad Jawadh",
+    "citizen_id": "AI2100-001",
+    "idcard": "citizens/JinshadJawadh_Citizen_IDCard.png",
+    "certificate": "citizens/JinshadJawadh_Citizen_Certificate.pdf"
+  },
+  {
+    "name": "Arjun Ravi",
+    "citizen_id": "AI2100-002",
+    "idcard": "citizens/ArjunRavi_Citizen_IDCard.png",
+    "certificate": "citizens/ArjunRavi_Citizen_Certificate.pdf"
+  },
+  {
+    "name": "Priya Nair",
+    "citizen_id": "AI2100-003",
+    "idcard": "citizens/PriyaNair_Citizen_IDCard.png",
+    "certificate": "citizens/PriyaNair_Citizen_Certificate.pdf"
+  },
+  {
+    "name": "Rahul Krishna",
+    "citizen_id": "AI2100-004",
+    "idcard": "citizens/RahulKrishna_Citizen_IDCard.png",
+    "certificate": "citizens/RahulKrishna_Citizen_Certificate.pdf"
+  }
+]
+
