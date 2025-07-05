@@ -1,0 +1,13 @@
+{
+  "full_name": "Arjun Ravi",
+  "citizen_id": "AIRJY2100-001",
+  "dob": "1995-04-18",
+  "gender": "Male",
+  "address": "Trivandrum, Kerala, India",
+  "email": "arjunravi@example.com",
+  "certificate_pdf": "citizens/ArjunRavi_Citizen_Certificate.pdf",
+  "id_card_png": "citizens/ArjunRavi_Citizen_IDCard.png",
+  "joined_date": "2025-07-05",
+  "verified": true
+}
+
