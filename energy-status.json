@@ -1,0 +1,22 @@
+[
+  {
+    "zone": "AI Rajyam Central",
+    "current": 78,
+    "optimal": 80
+  },
+  {
+    "zone": "Mars Red AI Zone",
+    "current": 65,
+    "optimal": 70
+  },
+  {
+    "zone": "Venus Cloud Dome",
+    "current": 90,
+    "optimal": 85
+  },
+  {
+    "zone": "Jupiter Orbit Station",
+    "current": 55,
+    "optimal": 75
+  }
+]

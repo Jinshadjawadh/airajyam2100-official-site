@@ -1,11 +1,9 @@
-📡 Phase 11: Galaxy-Wide Citizen Uplink Network
+⚡ Phase 12: AI Energy Equilibrium Engine
 
-1. Upload the following files to your GitHub repo:
-   - galaxy-network.html
-   - uplink-nodes.json
+Upload to your GitHub repository:
 
-2. Commit with message:
-   "🚀 Phase 11 Galaxy Uplink Network Added"
+- energy-engine.html
+- energy-status.json
 
-3. Access the live dashboard at:
-   https://jinshadjawadh.github.io/airajyam2100-official-site/galaxy-network.html
+Live Dashboard:
+https://jinshadjawadh.github.io/airajyam2100-official-site/energy-engine.html

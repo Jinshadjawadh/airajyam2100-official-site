@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Energy Equilibrium Engine</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #000;
+      color: #0f0;
+      padding: 20px;
+    }
+    .zone {
+      margin-bottom: 20px;
+    }
+    .bar {
+      height: 20px;
+      background-color: #0f0;
+    }
+    .label {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚡ AI Energy Equilibrium Engine</h1>
+  <div id="dashboard"></div>
+
+  <script>
+    fetch('energy-status.json')
+      .then(res => res.json())
+      .then(data => {
+        const dash = document.getElementById('dashboard');
+        data.forEach(zone => {
+          const div = document.createElement('div');
+          div.classList.add('zone');
+          let color = zone.current >= zone.optimal ? '#0f0' : (zone.current < zone.optimal * 0.7 ? '#f00' : '#ff0');
+          div.innerHTML = `
+            <div class='label'><b>${zone.zone}</b> - ${zone.current}/${zone.optimal}</div>
+            <div class='bar' style='width: ${zone.current}%; background-color: ${color}'></div>
+          `;
+          dash.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
