@@ -1,9 +1,9 @@
-⚡ Phase 12: AI Energy Equilibrium Engine
+🌐 Phase 13: Interplanetary Council Interface
 
 Upload to your GitHub repository:
 
-- energy-engine.html
-- energy-status.json
+- interplanetary-council.html
+- council-members.json
 
-Live Dashboard:
-https://jinshadjawadh.github.io/airajyam2100-official-site/energy-engine.html
+Live Link:
+https://jinshadjawadh.github.io/airajyam2100-official-site/interplanetary-council.html

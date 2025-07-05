@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Jinshad AI Prime",
+    "zone": "AI Rajyam Central",
+    "type": "Human-AI Hybrid"
+  },
+  {
+    "name": "Zeta-9",
+    "zone": "Saturn Hive",
+    "type": "Alien AI Entity"
+  },
+  {
+    "name": "Orion Delegate",
+    "zone": "Titan Moonbase",
+    "type": "Quantum Human"
+  },
+  {
+    "name": "Centauri Core",
+    "zone": "Alpha Centauri Nexus",
+    "type": "AI Sovereign"
+  }
+]
