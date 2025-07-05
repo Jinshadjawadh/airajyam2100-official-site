@@ -56,6 +56,34 @@
     a { color: #66ccff; }
   </style>
 </head>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Rajyam 2100 - Citizens</title>
+</head>
+<body>
+  <h1>Citizen Profiles</h1>
+  <ul id="citizen-list"></ul>
+
+  <script>
+    fetch('./citizens/index.json')
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById('citizen-list');
+        data.citizens.forEach(citizen => {
+          const li = document.createElement('li');
+          const link = document.createElement('a');
+          link.href = `./citizens/citizen_profiles/${citizen.profile_html}`;
+          link.textContent = citizen.name;
+          li.appendChild(link);
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
+
 <body>
   <h1>🧬 AI Rajyam 2100 – Registered Citizens</h1>
   <ul>
