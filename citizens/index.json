@@ -32,3 +32,37 @@
     }
   ]
 }
+{
+  "citizens": [
+    {
+      "name": "Jinshad",
+      "profile": "jinshad.html",
+      "dob": "1994-04-14",
+      "zone": "Prime District",
+      "role": "Prime Minister",
+      "badge": "🛡️ AI Visionary",
+      "photo": "jinshad.jpg",
+      "qr": "jinshad_qr.png"
+    },
+    {
+      "name": "Aisha",
+      "profile": "aisha.html",
+      "dob": "1997-09-21",
+      "zone": "Culture Zone",
+      "role": "Minister of Innovation",
+      "badge": "🎨 Creative Lead",
+      "photo": "aisha.jpg",
+      "qr": "aisha_qr.png"
+    },
+    {
+      "name": "Rahul",
+      "profile": "rahul.html",
+      "dob": "1991-03-05",
+      "zone": "Security Zone",
+      "role": "Minister of AI Law",
+      "badge": "🔐 Cyber Commander",
+      "photo": "rahul.jpg",
+      "qr": "rahul_qr.png"
+    }
+  ]
+}
