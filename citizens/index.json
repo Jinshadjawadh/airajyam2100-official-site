@@ -24,4 +24,11 @@
     "certificate": "citizens/RahulKrishna_Citizen_Certificate.pdf"
   }
 ]
-
+{
+  "citizens": [
+    {
+      "name": "Jinshad",
+      "profile": "jinshad.html"
+    }
+  ]
+}
