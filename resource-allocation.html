@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Rajyam 2100 – Resource Allocation Engine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      color: #ffcc00;
+    }
+    .module {
+      border: 1px solid #444;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      background: #1e1e1e;
+    }
+    input, select, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background: #ffaa00;
+      color: white;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 10px;
+      padding: 10px;
+      background: #222;
+      border-left: 4px solid #ffaa00;
+    }
+  </style>
+</head>
+<body>
+
+<h1>⚙️ AI Resource Allocation Engine</h1>
+
+<div class="module">
+  <h2>🧮 AI Budget Allocator</h2>
+  <select id="zone">
+    <option value="Central">Central Zone</option>
+    <option value="South">South Zone</option>
+    <option value="North">North Zone</option>
+  </select>
+  <input type="number" id="population" placeholder="Enter Zone Population" />
+  <button onclick="allocateBudget()">Allocate Budget</button>
+  <div id="budgetResult" class="result"></div>
+</div>
+
+<div class="module">
+  <h2>⚡ Energy & Infrastructure</h2>
+  <input type="number" id="powerUnits" placeholder="Enter Power Units Required" />
+  <button onclick="allocateEnergy()">Distribute Power</button>
+  <div id="energyResult" class="result"></div>
+</div>
+
+<div class="module">
+  <h2>📊 Data-Driven Equity Engine</h2>
+  <input type="text" id="zoneNeed" placeholder="Enter Special Needs (e.g., Flood Relief)" />
+  <button onclick="distributeAid()">Distribute Resources</button>
+  <div id="aidResult" class="result"></div>
+</div>
+
+<script>
+function allocateBudget() {
+  const zone = document.getElementById("zone").value;
+  const pop = parseInt(document.getElementById("population").value);
+  const budget = pop * 120;
+  document.getElementById("budgetResult").innerText =
+    `🧾 Budget for ${zone} Zone (pop. ${pop}) is ₹${budget.toLocaleString()} AI Credits.`;
+}
+
+function allocateEnergy() {
+  const units = parseInt(document.getElementById("powerUnits").value);
+  let response = "✅ Power allocated successfully.";
+  if (units > 10000) response = "⚠️ Load too high – optimize usage or stagger allocation.";
+  document.getElementById("energyResult").innerText = response;
+}
+
+function distributeAid() {
+  const need = document.getElementById("zoneNeed").value.toLowerCase();
+  let resource = "General aid dispatched.";
+  if (need.includes("flood")) resource = "🚨 Emergency flood relief resources mobilized.";
+  if (need.includes("ai")) resource = "📡 AI computational units distributed.";
+  document.getElementById("aidResult").innerText = resource;
+}
+</script>
+
+</body>
+</html>
