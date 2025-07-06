@@ -1,0 +1,20 @@
+[
+  {
+    "treaty_name": "Unified AI-Human Ethics Pact",
+    "date_signed": "2100-01-01",
+    "signatories": ["AI Rajyam", "Human Federation", "Neo Japan"],
+    "scope": "Ethics, Rights, Co-Governance"
+  },
+  {
+    "treaty_name": "Interplanetary AI Trade Treaty",
+    "date_signed": "2100-06-15",
+    "signatories": ["AI Rajyam", "Mars Tech Union", "Europa Robotics Council"],
+    "scope": "Tech Exchange, Cyber Trade, Resource Sharing"
+  },
+  {
+    "treaty_name": "AI Disarmament & Peace Protocol",
+    "date_signed": "2100-08-01",
+    "signatories": ["AI Rajyam", "UNAI", "Cyber Peace Force"],
+    "scope": "Weapon Ban, Ethics Control, Surveillance Treaty"
+  }
+]
