@@ -1,68 +1,9 @@
-[
-  {
-    "name": "Jinshad Jawadh",
-    "citizen_id": "AI2100-001",
-    "idcard": "citizens/JinshadJawadh_Citizen_IDCard.png",
-    "certificate": "citizens/JinshadJawadh_Citizen_Certificate.pdf"
-  },
-  {
-    "name": "Arjun Ravi",
-    "citizen_id": "AI2100-002",
-    "idcard": "citizens/ArjunRavi_Citizen_IDCard.png",
-    "certificate": "citizens/ArjunRavi_Citizen_Certificate.pdf"
-  },
-  {
-    "name": "Priya Nair",
-    "citizen_id": "AI2100-003",
-    "idcard": "citizens/PriyaNair_Citizen_IDCard.png",
-    "certificate": "citizens/PriyaNair_Citizen_Certificate.pdf"
-  },
-  {
-    "name": "Rahul Krishna",
-    "citizen_id": "AI2100-004",
-    "idcard": "citizens/RahulKrishna_Citizen_IDCard.png",
-    "certificate": "citizens/RahulKrishna_Citizen_Certificate.pdf"
-  }
-]
 {
   "citizens": [
     {
       "name": "Jinshad",
-      "profile": "jinshad.html"
-    }
-  ]
-}
-{
-  "citizens": [
-    {
-      "name": "Jinshad",
-      "profile": "jinshad.html",
-      "dob": "1994-04-14",
-      "zone": "Prime District",
-      "role": "Prime Minister",
-      "badge": "🛡️ AI Visionary",
-      "photo": "jinshad.jpg",
-      "qr": "jinshad_qr.png"
-    },
-    {
-      "name": "Aisha",
-      "profile": "aisha.html",
-      "dob": "1997-09-21",
-      "zone": "Culture Zone",
-      "role": "Minister of Innovation",
-      "badge": "🎨 Creative Lead",
-      "photo": "aisha.jpg",
-      "qr": "aisha_qr.png"
-    },
-    {
-      "name": "Rahul",
-      "profile": "rahul.html",
-      "dob": "1991-03-05",
-      "zone": "Security Zone",
-      "role": "Minister of AI Law",
-      "badge": "🔐 Cyber Commander",
-      "photo": "rahul.jpg",
-      "qr": "rahul_qr.png"
+      "id": "jinshad",
+      "profile": "citizens/jinshad.html"
     }
   ]
 }
