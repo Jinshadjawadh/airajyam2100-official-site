@@ -1,120 +1,40 @@
-/* GLOBAL RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #0a0a0a, #000000);
-  color: #f8f8f8;
-  position: relative;
-  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: white;
 }
-
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: rgba(0, 0, 0, 0.85);
-  border-bottom: 1px solid #1f1f1f;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.03);
+  text-align: center;
+  padding: 40px;
+  background-color: rgba(0,0,0,0.7);
 }
-
 .logo {
-  font-size: 20px;
-  font-weight: 600;
-  color: #00ffea;
-}
-
-nav a {
-  margin-left: 24px;
-  color: #aaa;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 5px #0ff;
-}
-
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(145deg, #000000, #111111, #1c1c1c);
-  color: #ffffff;
-}
-
-.hero h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #ccc;
-}
-
-.btn {
-  background-color: #00c9a7;
-  color: #000;
-  padding: 12px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #fff;
-  color: #000;
-  box-shadow: 0 0 10px #00ffcc;
-}
-
-.info {
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-}
-
-.info h2 {
-  font-size: 28px;
-  margin-bottom: 12px;
-  color: #00ffea;
-}
-
-.info p {
-  font-size: 17px;
-  color: #ddd;
-  line-height: 1.6;
-}
-
-footer {
-  background: #111;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #888;
-}
-
-/* Illuminati Eye Overlay */
-.overlay-symbol {
-  position: absolute;
-  top: 20px;
-  right: 20px;
   width: 100px;
-  height: 100px;
-  background-image: url('assets/illuminati-eye.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.08;
-  pointer-events: none;
-  z-index: 0;
+}
+nav {
+  background-color: rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #0ff;
+}
+.hero {
+  padding: 50px;
+  text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.6);
+  font-size: 14px;
 }
