@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Rajyam - AI Performance Reports</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+    h1 { text-align: center; }
+    .stats { text-align: center; margin-top: 20px; }
+    .card { background: #fff; margin: 10px auto; padding: 20px; width: 90%; max-width: 600px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    canvas { margin: 20px auto; display: block; max-width: 600px; }
+    .footer { margin-top: 30px; text-align: center; font-size: 0.9em; color: gray; }
+  </style>
+</head>
+<body>
+  <h1>🤖 AI Rajyam 2100 - Performance Dashboard</h1>
+
+  <div class="card">
+    <h2>🧠 Total AI Decisions</h2>
+    <p id="total-decisions">Loading...</p>
+  </div>
+
+  <div class="card">
+    <h2>⚙️ Task Execution Efficiency</h2>
+    <canvas id="efficiencyChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>💬 Citizen Satisfaction</h2>
+    <canvas id="satisfactionChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>🕒 Uptime & Response Time</h2>
+    <p id="uptime"></p>
+    <p id="responseTime"></p>
+  </div>
+
+  <div class="footer">
+    GitHub Repo (All Phases): <a href="https://github.com/Jinshadjawadh/airajyam2100-official-site" target="_blank">
+    https://github.com/Jinshadjawadh/airajyam2100-official-site</a>
+  </div>
+
+<script>
+  fetch("data/ai-stats.json")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("total-decisions").textContent = data.total_decisions;
+      document.getElementById("uptime").textContent = "Uptime: " + data.uptime + "%";
+      document.getElementById("responseTime").textContent = "Avg. Response Time: " + data.response_time + "s";
+
+      const ctx1 = document.getElementById("efficiencyChart").getContext("2d");
+      new Chart(ctx1, {
+        type: "bar",
+        data: {
+          labels: data.efficiency.labels,
+          datasets: [{
+            label: "Efficiency (%)",
+            data: data.efficiency.values,
+            backgroundColor: "#3498db"
+          }]
+        }
+      });
+
+      const ctx2 = document.getElementById("satisfactionChart").getContext("2d");
+      new Chart(ctx2, {
+        type: "pie",
+        data: {
+          labels: data.satisfaction.labels,
+          datasets: [{
+            data: data.satisfaction.values,
+            backgroundColor: ["#2ecc71", "#f1c40f", "#e74c3c"]
+          }]
+        }
+      });
+    });
+</script>
+</body>
+</html>
