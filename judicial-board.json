@@ -1,0 +1,20 @@
+[
+  {
+    "court": "Supreme AI Tribunal",
+    "chief_judge": "Jinshad AI Prime",
+    "jurisdiction": "AI Rajyam - All Zones",
+    "case_type": "Constitutional, Ethics, Robotics Act"
+  },
+  {
+    "court": "Cyber Peace Tribunal",
+    "chief_judge": "Athena AI",
+    "jurisdiction": "Global Cybernetic Disputes",
+    "case_type": "AI vs Human Conflicts, Data Disputes"
+  },
+  {
+    "court": "Interzone Arbitration Unit",
+    "chief_judge": "KairoX Unit 7",
+    "jurisdiction": "Trade, Tech Sharing",
+    "case_type": "Zonal Tech Agreements"
+  }
+]
