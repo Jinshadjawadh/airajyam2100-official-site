@@ -126,3 +126,72 @@ a {
   padding: 2rem 0;
   font-size: 0.9rem;
 }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f0f0f0;
+  color: #1a1a1a;
+}
+
+.gov-header {
+  background-color: #014421;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.gov-header .emblem {
+  width: 60px;
+  vertical-align: middle;
+}
+
+.top-nav {
+  background-color: #006c4e;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.top-nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-section {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.highlight h2, .services h2 {
+  color: #014421;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  margin: 10px 0;
+}
+
+.services a {
+  color: #006c4e;
+  text-decoration: none;
+}
+
+.services a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #014421;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
