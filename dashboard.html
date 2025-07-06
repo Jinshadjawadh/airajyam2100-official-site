@@ -2,49 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Rajyam 2100 - Citizen Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
-    .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    h1 { color: #003366; margin-bottom: 10px; }
-    .stat-box { margin: 20px 0; padding: 20px; background: #e6f0ff; border-left: 5px solid #0055aa; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 10px 0; font-size: 18px; }
-    a { text-decoration: none; color: #007bff; }
-    a:hover { text-decoration: underline; }
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f0f0; }
+    h1 { text-align: center; }
+    .stats { margin: 20px 0; text-align: center; }
+    .search { text-align: center; margin-bottom: 20px; }
+    .citizen-list { text-align: center; }
+    canvas { max-width: 400px; margin: 20px auto; display: block; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>AI Rajyam 2100 - Citizen Dashboard</h1>
-    <div id="summary" class="stat-box">Loading summary...</div>
-    <h2>All Citizens</h2>
-    <ul id="citizenList">Loading citizens...</ul>
+  <h1>AI Rajyam 2100 - Citizen Dashboard</h1>
+  <div class="stats">
+    <p><strong>Total Citizens:</strong> <span id="totalCitizens">0</span></p>
   </div>
+  <canvas id="roleChart"></canvas>
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="Search by name..." />
+  </div>
+  <div class="citizen-list" id="citizenList"></div>
 
   <script>
-    fetch('citizens/index.json')
-      .then(response => response.json())
-      .then(data => {
-        const list = document.getElementById('citizenList');
-        const summary = document.getElementById('summary');
-        list.innerHTML = '';
-        summary.innerHTML = 'Total Registered Citizens: <strong>' + data.citizens.length + '</strong>';
+    async function loadData() {
+      try {
+        const res = await fetch('citizens/index.json');
+        const data = await res.json();
+        const citizens = data.citizens;
+        document.getElementById('totalCitizens').textContent = citizens.length;
 
-        data.citizens.forEach(citizen => {
-          const li = document.createElement('li');
-          const link = document.createElement('a');
-          link.href = 'citizens/' + citizen.profile;
-          link.textContent = citizen.name;
-          li.appendChild(link);
-          list.appendChild(li);
+        const listDiv = document.getElementById('citizenList');
+        listDiv.innerHTML = '';
+        let roleMap = {};
+
+        citizens.forEach(citizen => {
+          const p = document.createElement('p');
+          const a = document.createElement('a');
+          a.href = citizen.profile;
+          a.textContent = citizen.name + " (" + citizen.id + ")";
+          p.appendChild(a);
+          listDiv.appendChild(p);
+
+          if (roleMap[citizen.role]) {
+            roleMap[citizen.role]++;
+          } else {
+            roleMap[citizen.role] = 1;
+          }
         });
-      })
-      .catch(error => {
-        document.getElementById('citizenList').innerText = 'Error loading citizens.';
-        document.getElementById('summary').innerText = 'Error loading summary.';
-        console.error('Failed to load JSON:', error);
-      });
+
+        const ctx = document.getElementById('roleChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: Object.keys(roleMap),
+            datasets: [{
+              data: Object.values(roleMap),
+              backgroundColor: ['#3498db','#f1c40f','#e74c3c','#2ecc71','#9b59b6']
+            }]
+          },
+          options: {
+            responsive: true
+          }
+        });
+
+        document.getElementById('searchInput').addEventListener('input', function () {
+          const value = this.value.toLowerCase();
+          const items = listDiv.querySelectorAll('p');
+          items.forEach(p => {
+            p.style.display = p.textContent.toLowerCase().includes(value) ? '' : 'none';
+          });
+        });
+      } catch (e) {
+        console.error("Error loading data", e);
+      }
+    }
+
+    loadData();
   </script>
 </body>
 </html>
