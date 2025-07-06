@@ -1,94 +1,93 @@
-/* General Body */
-body {
+/* General Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #000;
+  background-image: url('assets/bg/emblem-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #fff;
+  min-height: 100vh;
+  padding: 0;
 }
 
 /* Navigation Bar */
 nav {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 15px 30px;
+  display: flex;
+  gap: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
-  color: #00ffff;
+  color: #00ffcc;
   text-decoration: none;
-  margin: 10px;
   font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #00ff88;
+  color: #ffffff;
 }
 
-/* Header Section */
+/* Page Title */
 header {
   text-align: center;
-  padding: 80px 20px 40px;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
+  padding: 40px 20px 10px;
 }
 
 header h1 {
   font-size: 3em;
-  margin-bottom: 10px;
-  color: #00ffff;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
 }
 
-header p {
-  font-size: 1.3em;
-  color: #aaa;
-}
-
-/* Main Content */
-.content {
+/* Section Layout */
+section {
+  padding: 30px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 20px auto;
+  width: 90%;
   max-width: 1000px;
-  margin: auto;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
   border-radius: 10px;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 0 15px #00ffcc44;
 }
 
-.content h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #00ffaa;
-}
-
-.content p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #ddd;
+/* Cards or Info Boxes */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #00ffcc;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffcc33;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.9);
-  font-size: 0.9em;
-  color: #aaa;
+  background: rgba(0, 0, 0, 0.75);
+  position: relative;
+  bottom: 0;
+  color: #bbb;
 }
 
-/* Button Styles (Optional future use) */
-button {
-  background-color: #00ffff;
-  color: #000;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
 
-button:hover {
-  background-color: #00ccaa;
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
