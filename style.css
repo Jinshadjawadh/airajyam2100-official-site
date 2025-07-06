@@ -1,69 +1,128 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Apple Inspired UI - style.css */
+
+* {
   margin: 0;
-  background: #f0f0f0;
-  color: #1a1a1a;
-}
-
-.gov-header {
-  background-color: #014421;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.gov-header .emblem {
-  width: 60px;
-  vertical-align: middle;
-}
-
-.top-nav {
-  background-color: #006c4e;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.top-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.top-nav a:hover {
-  text-decoration: underline;
-}
-
-.main-section {
-  padding: 30px;
-  background-color: #ffffff;
-}
-
-.highlight h2, .services h2 {
-  color: #014421;
-}
-
-.services ul {
-  list-style: none;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.services li {
-  margin: 10px 0;
+body {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8f8f8;
+  color: #1d1d1f;
+  line-height: 1.6;
 }
 
-.services a {
-  color: #006c4e;
+a {
   text-decoration: none;
+  color: inherit;
 }
 
-.services a:hover {
-  text-decoration: underline;
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: auto;
 }
 
-footer {
-  background: #014421;
-  color: white;
-  padding: 10px;
+/* Nav */
+.navbar {
+  background: #000;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #d2d2d7;
+  font-weight: 500;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to bottom, #000, #111);
+  color: #fff;
+  padding: 5rem 0;
   text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.hero-actions .btn-primary,
+.btn-secondary {
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  margin: 0.5rem;
+  display: inline-block;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #d2d2d7;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Section */
+.section {
+  padding: 4rem 0;
+}
+
+.gray-bg {
+  background-color: #f2f2f5;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #999;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
 }
