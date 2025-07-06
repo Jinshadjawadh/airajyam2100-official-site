@@ -1,68 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>AI Rajyam 2100 - Zone Governance</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f8ff;
-      color: #333;
-      padding: 20px;
-    }
-    h1 {
-      color: #004d99;
-    }
-    .zone {
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-    }
-    .zone a {
-      text-decoration: none;
-      color: #0077cc;
-    }
-  </style>
+  <title>Zone-Wise AI Governance Units</title>
 </head>
 <body>
-
-  <h1>🧭 Zone-Wise AI Governance Units</h1>
-  <p>AI Rajyam 2100 – Real-time status and dashboards of each zone.</p>
-
-  <div id="zones-list">Loading zones...</div>
-
+  <h1>AI Governance Zones</h1>
+  <div id="zones-list"></div>
   <script>
     fetch('../data/zones.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Zones data not found");
-        }
-        return response.json();
-      })
+      .then(response => response.json())
       .then(data => {
-        const list = document.getElementById('zones-list');
-        list.innerHTML = '';
-
+        const container = document.getElementById('zones-list');
         data.forEach(zone => {
           const div = document.createElement('div');
-          div.className = 'zone';
-          div.innerHTML = `
-            <h2>${zone.name}</h2>
-            <p>🆔 Zone ID: ${zone.zoneId}</p>
-            <p>🧑‍🤝‍🧑 Citizens: ${zone.citizenCount}</p>
-            <p>🤖 AI Unit: ${zone.aiUnit}</p>
-            <p>📡 Status: ${zone.status}</p>
-            <a href="${zone.name.toLowerCase()}.html" target="_blank">🔗 View Dashboard</a>
-          `;
-          list.appendChild(div);
+          div.innerHTML = `<h2>${zone.name}</h2>
+                           <p>Status: ${zone.status}</p>
+                           <a href="${zone.name.toLowerCase()}.html">Open Zone Dashboard</a>`;
+          container.appendChild(div);
         });
-      })
-      .catch(error => {
-        document.getElementById('zones-list').innerText = "Error loading zones: " + error.message;
       });
   </script>
-
 </body>
 </html>
