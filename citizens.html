@@ -1,98 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>AI Rajyam 2100 – Citizen Portal</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f7faff;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      color: #003366;
-    }
-    .certificate-preview {
-      border: 2px solid #003366;
-      border-radius: 10px;
-      padding: 20px;
-      background: white;
-      max-width: 800px;
-      margin: auto;
-    }
-    .button {
-      padding: 10px 20px;
-      background: #003366;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <h1>🧬 Welcome to the AI Rajyam 2100 Citizen Portal</h1>
-  <p>Download your official certificate and ID below. More features coming soon.</p>
-
-  <div class="certificate-preview">
-    <h2>🎓 Sample Certificate – Arjun Ravi</h2>
-    <p>Ministry: Technology | Country: India | Citizen ID: AIR2100-CZ-0001</p>
-    <a class="button" href="citizens/ArjunRavi_Certificate.pdf" download>Download Certificate</a>
-    <a class="button" href="citizens/ArjunRavi_IDCard.png" download>Download ID Card</a>
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Rajyam Citizens</title>
-  <style>
-    body { font-family: Arial; background: #000a23; color: white; padding: 30px; }
-    h1 { color: #00ffcc; }
-    ul li { margin: 10px 0; }
-    a { color: #66ccff; }
-  </style>
-</head>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>AI Rajyam 2100 - Citizens</title>
 </head>
 <body>
-  <h1>Citizen Profiles</h1>
-  <ul id="citizen-list"></ul>
-
+  <h1>AI Rajyam 2100 - Citizen List</h1>
+  <ul id="citizenList"></ul>
   <script>
-    fetch('./citizens/index.json')
+    fetch('citizens/index.json')
       .then(response => response.json())
       .then(data => {
-        const list = document.getElementById('citizen-list');
+        const list = document.getElementById('citizenList');
         data.citizens.forEach(citizen => {
           const li = document.createElement('li');
           const link = document.createElement('a');
-          link.href = `./citizens/citizen_profiles/${citizen.profile_html}`;
+          link.href = citizen.profile;
           link.textContent = citizen.name;
           li.appendChild(link);
           list.appendChild(li);
         });
+      })
+      .catch(error => {
+        document.body.innerHTML += '<p style="color:red;">Error loading citizens.</p>';
       });
   </script>
-</body>
-</html>
-
-<body>
-  <h1>🧬 AI Rajyam 2100 – Registered Citizens</h1>
-  <ul>
-    <li>
-      Arjun Ravi – 
-      <a href="citizens/ArjunRavi_Citizen_Certificate.pdf" target="_blank">Certificate</a> | 
-      <a href="citizens/ArjunRavi_Citizen_IDCard.png" target="_blank">ID Card</a>
-    </li>
-    <!-- Add more citizens manually -->
-  </ul>
 </body>
 </html>
