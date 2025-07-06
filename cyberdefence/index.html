@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI Cyber Defence Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0f7fa;
+      padding: 20px;
+    }
+    h1 {
+      color: #80d8ff;
+    }
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .status-box {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border: 1px solid #00796b;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .status-box.online {
+      border-color: #00e676;
+    }
+    .status-box.offline {
+      border-color: #ff1744;
+    }
+    .log {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #212121;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🛡️ AI Cyber Defence Grid</h1>
+  <p>Real-time Status of AI Firewalls, Threat Detectors, and Response Nodes</p>
+
+  <div class="status-grid">
+    <div class="status-box online">Firewall Alpha<br>Status: Online</div>
+    <div class="status-box online">Intrusion Detector 01<br>Status: Online</div>
+    <div class="status-box offline">Response Node Zeta<br>Status: Offline</div>
+  </div>
+
+  <div class="log">
+    <h3>📄 Recent Threat Logs</h3>
+    <ul>
+      <li>[08:22] Botnet attempt blocked - Trivandrum Node</li>
+      <li>[08:20] Phishing site neutralized</li>
+      <li>[08:18] Unauthorized login attempt from Zone 9</li>
+    </ul>
+  </div>
+</body>
+</html>
