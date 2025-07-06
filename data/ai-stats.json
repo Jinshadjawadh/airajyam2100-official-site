@@ -1,0 +1,13 @@
+{
+  "total_decisions": 8421,
+  "uptime": 99.98,
+  "response_time": 1.3,
+  "efficiency": {
+    "labels": ["Transport", "Health", "Security", "Governance", "Energy"],
+    "values": [94, 88, 92, 96, 90]
+  },
+  "satisfaction": {
+    "labels": ["Very Satisfied", "Neutral", "Unsatisfied"],
+    "values": [78, 15, 7]
+  }
+}
