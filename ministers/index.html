@@ -2,67 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ministers Dashboard | AI Rajyam 2100</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      text-align: center;
-    }
-    header {
-      background-color: #1a1a1a;
-      padding: 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
-      margin: 20px 0;
-    }
-    nav a {
-      color: #00ffcc;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .coming-soon {
-      margin-top: 100px;
-      font-size: 2rem;
-      color: #ffcc00;
-    }
-    footer {
-      position: fixed;
-      bottom: 10px;
-      width: 100%;
-      color: #aaa;
-    }
-  </style>
+  <title>Ministers - AI Rajyam 2100</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <header>
-    <h1>AI Rajyam 2100 - Ministers Dashboard</h1>
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="../citizens.html">Citizens</a>
-      <a href="../zones/index.html">Zones</a>
-      <a href="../judiciary/index.html">Judiciary</a>
-      <a href="index.html">Ministers</a>
-    </nav>
-  </header>
+  <h1>Ministers of AI Rajyam 2100</h1>
+  <div id="ministers-list">Loading ministers...</div>
 
-  <div class="coming-soon">
-    🚧 Ministers Dashboard Page Coming Soon 🚧
-  </div>
-
-  <footer>
-    &copy; 2100 AI Rajyam | Powered by AI Governance Engine
-  </footer>
+  <script>
+    fetch('ministers.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('ministers-list');
+        container.innerHTML = '';
+        data.ministers.forEach(minister => {
+          const div = document.createElement('div');
+          div.className = 'minister-card';
+          div.innerHTML = `
+            <h3>${minister.name}</h3>
+            <p>Position: ${minister.position}</p>
+            <a href="${minister.profile}">View Profile</a>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(error => {
+        document.getElementById('ministers-list').innerText = 'Error loading ministers.';
+        console.error('Error:', error);
+      });
+  </script>
 </body>
 </html>

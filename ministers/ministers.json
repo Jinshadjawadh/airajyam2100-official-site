@@ -1,0 +1,14 @@
+{
+  "ministers": [
+    {
+      "name": "Jinshad",
+      "position": "Prime Minister",
+      "profile": "jinshad.html"
+    },
+    {
+      "name": "Vasudev",
+      "position": "Minister of Technology",
+      "profile": "vasudev.html"
+    }
+  ]
+}
