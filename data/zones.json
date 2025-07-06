@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Trivandrum",
+    "zoneId": "zone-001",
+    "citizenCount": 32,
+    "aiUnit": "Trivandrum-AI-Unit",
+    "status": "Active"
+  },
+  {
+    "name": "Ernakulam",
+    "zoneId": "zone-002",
+    "citizenCount": 19,
+    "aiUnit": "Ernakulam-AI-Unit",
+    "status": "Pending Activation"
+  }
+]
