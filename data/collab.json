@@ -1,0 +1,18 @@
+{
+  "collaborations": [
+    {
+      "title": "Smart Farming with AI",
+      "citizen": "Jinshad",
+      "description": "Using AI + Robotics to automate farming in Zone 4.",
+      "ai_suggestion": "Deploy drone-based soil analysis system.",
+      "priority": "High"
+    },
+    {
+      "title": "Education AI Assistant",
+      "citizen": "Meera",
+      "description": "Create an AI tutor for school students.",
+      "ai_suggestion": "Use NLP models fine-tuned on syllabus content.",
+      "priority": "Medium"
+    }
+  ]
+}
