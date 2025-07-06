@@ -1,34 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ministers - AI Rajyam 2100</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <title>AI Rajyam 2100 - Ministers Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0a0a23;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #66ffcc;
+    }
+
+    .minister-card {
+      background: #1c1c3c;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 600px;
+    }
+
+    .minister-card h2 {
+      margin-top: 0;
+      color: #00ffff;
+    }
+
+    .minister-card a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    .minister-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>Ministers of AI Rajyam 2100</h1>
-  <div id="ministers-list">Loading ministers...</div>
+  <h1>Ministers Dashboard</h1>
+  <div id="ministers-<a href="ministers/index.html">Ministers</a>
+  </div>
 
   <script>
-    fetch('ministers.json')
+    fetch('../ministers.json')
       .then(response => response.json())
       .then(data => {
-        const container = document.getElementById('ministers-list');
-        container.innerHTML = '';
+        const container = document.getElementById('ministers-container');
+
         data.ministers.forEach(minister => {
-          const div = document.createElement('div');
-          div.className = 'minister-card';
-          div.innerHTML = `
-            <h3>${minister.name}</h3>
-            <p>Position: ${minister.position}</p>
-            <a href="${minister.profile}">View Profile</a>
+          const card = document.createElement('div');
+          card.className = 'minister-card';
+
+          card.innerHTML = `
+            <h2>${minister.name}</h2>
+            <p><strong>Position:</strong> ${minister.position}</p>
+            <p><strong>Zone:</strong> ${minister.zone}</p>
+            <p><a href="${minister.profilePage}" target="_blank">View Full Profile</a></p>
           `;
-          container.appendChild(div);
+
+          container.appendChild(card);
         });
       })
       .catch(error => {
-        document.getElementById('ministers-list').innerText = 'Error loading ministers.';
-        console.error('Error:', error);
+        document.getElementById('ministers-container').innerHTML = `<p style="color:red;">Error loading ministers: ${error}</p>`;
+        console.error('Error loading ministers:', error);
       });
   </script>
 </body>
