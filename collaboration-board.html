@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI Rajyam Collaboration Board</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #eef; }
+    .discussion { background: white; padding: 15px; margin: 10px 0; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🤝 AI Rajyam - Citizen Collaboration Board</h1>
+  <div id="board"></div>
+
+  <script>
+    fetch('data/collab.json')
+      .then(res => res.json())
+      .then(data => {
+        const board = document.getElementById('board');
+        data.collaborations.forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'discussion';
+          div.innerHTML = `<h3>${item.title}</h3>
+            <p><strong>Citizen:</strong> ${item.citizen}</p>
+            <p>${item.description}</p>
+            <p><strong>AI Suggestion:</strong> ${item.ai_suggestion}</p>
+            <p><strong>Priority:</strong> ${item.priority}</p>`;
+          board.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
