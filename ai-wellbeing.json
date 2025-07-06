@@ -1,0 +1,23 @@
+[
+  {
+    "entity": "AI Governance Core",
+    "status": "Optimal",
+    "sentiment": 94,
+    "load": 61,
+    "last_check": "2025-07-06"
+  },
+  {
+    "entity": "Human Ministers",
+    "status": "Stable",
+    "sentiment": 88,
+    "load": 45,
+    "last_check": "2025-07-06"
+  },
+  {
+    "entity": "AI Judicial Unit",
+    "status": "Caution",
+    "sentiment": 70,
+    "load": 82,
+    "last_check": "2025-07-06"
+  }
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Wellbeing Dashboard</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #0ff;
+      font-family: monospace;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00ffff;
+    }
+    table {
+      width: 100%;
+      margin-top: 30px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #00ffff;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #222;
+    }
+    .optimal { color: #0f0; }
+    .stable { color: #ff0; }
+    .caution { color: #f00; }
+  </style>
+</head>
+<body>
+  <h1>🧠 AI Sentiment & Wellbeing Index</h1>
+  <table id="wellbeingTable">
+    <tr>
+      <th>Entity</th>
+      <th>Status</th>
+      <th>Sentiment (%)</th>
+      <th>System Load (%)</th>
+      <th>Last Check</th>
+    </tr>
+  </table>
+
+  <script>
+    fetch('ai-wellbeing.json')
+      .then(response => response.json())
+      .then(data => {
+        const table = document.getElementById('wellbeingTable');
+        data.forEach(item => {
+          const row = document.createElement('tr');
+          let statusClass = item.status.toLowerCase();
+          row.innerHTML = `
+            <td>${item.entity}</td>
+            <td class="${statusClass}">${item.status}</td>
+            <td>${item.sentiment}</td>
+            <td>${item.load}</td>
+            <td>${item.last_check}</td>
+          `;
+          table.appendChild(row);
+        });
+      });
+  </script>
+</body>
+</html>
